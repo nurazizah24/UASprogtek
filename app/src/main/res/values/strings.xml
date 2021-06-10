@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ProjectUAS</string>
+    <string name="keterangan_pesanan_kursus_home">Pesanan Kursus</string>
+    <string name="keterangan_menunggu_persetujuan_murid">Menunggu Persetujuan</string>
+    <string name="keterangan_inzoom_murid">Mulai Kelas</string>
+    <string name="keteranganhistori_murid">Histori</string>
+
 </resources>
