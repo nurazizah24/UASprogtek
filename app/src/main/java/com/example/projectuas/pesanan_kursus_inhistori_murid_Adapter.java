@@ -28,9 +28,9 @@ public class pesanan_kursus_inhistori_murid_Adapter extends RecyclerView.Adapter
 
     @Override
     public void onBindViewHolder(@NonNull  pesanan_kursus_inhistori_murid_Adapter.inhistori_pesanan_kursus_muridHolder holder, int position) {
-        holder.cardView_nama_guru.setText(String.valueOf(arraylistinhistori_murid.get(position).getNama_guru()));
-        holder.cardView_keahlian_guru.setText(String.valueOf(arraylistinhistori_murid.get(position).getKeahlian_guru()));
-        holder.cardView_kota_guru.setText(String.valueOf(arraylistinhistori_murid.get(position).getKota_guru()));
+        holder.cardView_nama_guru.setText(arraylistinhistori_murid.get(position).getNama_guru());
+        holder.cardView_keahlian_guru.setText(arraylistinhistori_murid.get(position).getKeahlian_guru());
+        holder.cardView_kota_guru.setText((arraylistinhistori_murid.get(position).getKota_guru()));
     }
 
     @Override

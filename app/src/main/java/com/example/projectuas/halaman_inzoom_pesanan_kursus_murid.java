@@ -14,6 +14,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -45,11 +46,7 @@ public class halaman_inzoom_pesanan_kursus_murid extends AppCompatActivity {
         inisialisasi();
         setRycycleView();
 
-        if(dataguru.size()==0){
-            textitemnodata.setText("No Data");
-        }else{
-            textitemnodata.setText("");
-        }
+
 
 
         getAlldataGuru(getDataSession.getString("session_username_user", null));
@@ -72,15 +69,16 @@ public class halaman_inzoom_pesanan_kursus_murid extends AppCompatActivity {
     }
 
     private void getAlldataGuru(String username_murid){
-        String url=Global.base_url+"controller_getAllDataguru_pesanan_murid_inzoom";
+        String url=Global.base_url+"controller_getAllDataguru_pesanan_murid_inzoom.php";
         RequestQueue myQueue = Volley.newRequestQueue(this);
 
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url,null,
-                new Response.Listener<JSONObject>() {
+        StringRequest request = new StringRequest(Request.Method.POST, url,
+                new Response.Listener<String>() {
                     @Override
-                    public void onResponse(JSONObject response) {
+                    public void onResponse(String response) {
                         try {
-                            JSONArray jsondataarrayguruall = response.getJSONArray("data_guru");
+                            JSONObject jsonGet=new JSONObject(response);
+                            JSONArray jsondataarrayguruall = jsonGet.getJSONArray("data_guru");
                             for(int i = 0; i < jsondataarrayguruall.length(); i++){
                                 JSONObject jsondataobjguruall = jsondataarrayguruall.getJSONObject(i);
                                 list_guru datagurunew = new list_guru();
@@ -91,6 +89,12 @@ public class halaman_inzoom_pesanan_kursus_murid extends AppCompatActivity {
                                 dataguru.add(datagurunew);
                             }
                             pesanankursusinzoomadapter.notifyDataSetChanged();
+                            if(dataguru.size()==0){
+                                textitemnodata.setText("No Data");
+                            }else{
+                                textitemnodata.setText("");
+                            }
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }

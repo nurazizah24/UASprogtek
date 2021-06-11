@@ -1,6 +1,5 @@
 package com.example.projectuas;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -15,11 +14,9 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -71,7 +68,7 @@ getDataAllMurid_byUsername(getDataSession.getString("session_username_user", nul
 
 
 
-    private void getDataAllMurid_byUsername(String username_login) {
+    public void getDataAllMurid_byUsername(String username_login) {
         String url=Global.base_url+"controller_getALlData_murid_byUsername.php";
 
         StringRequest request= new StringRequest(Request.Method.POST, url,
@@ -136,7 +133,7 @@ getDataAllMurid_byUsername(getDataSession.getString("session_username_user", nul
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> data_user_pesanan=new HashMap<>();
-                data_user_pesanan.put("id_murid", String.valueOf(get_id_murid));
+                data_user_pesanan.put("id_murid", "get_id_murid");
 
                 return data_user_pesanan;
             }

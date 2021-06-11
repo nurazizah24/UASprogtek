@@ -4,6 +4,15 @@ public class list_guru {
     private String nama_guru;
     private String kota_guru;
     private String keahlian_guru;
+private int saldo_guru;
+
+    public int getSaldo_guru() {
+        return saldo_guru;
+    }
+
+    public void setSaldo_guru(int saldo_guru) {
+        this.saldo_guru = saldo_guru;
+    }
 
     public String getNama_guru() {
         return nama_guru;
