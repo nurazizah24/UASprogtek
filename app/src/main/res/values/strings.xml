@@ -4,5 +4,7 @@
     <string name="keterangan_menunggu_persetujuan_murid">Menunggu Persetujuan</string>
     <string name="keterangan_inzoom_murid">Mulai Kelas</string>
     <string name="keteranganhistori_murid">Histori</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

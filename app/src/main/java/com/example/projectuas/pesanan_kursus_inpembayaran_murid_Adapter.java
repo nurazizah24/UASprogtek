@@ -39,7 +39,7 @@ public class pesanan_kursus_inpembayaran_murid_Adapter extends RecyclerView.Adap
         holder.button_bayar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //saldomurid--
+                //saldo
             }
         });
     }

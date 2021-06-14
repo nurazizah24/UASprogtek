@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/homeku"
+    android:title="beranda"
+    android:icon="@drawable/home_bottom"
+    />
+
+    <item android:id="@+id/temukan_guru"
+        android:title="Temukan Guru"
+        android:icon="@drawable/temukan_guru"
+        />
+    <item android:id="@+id/list"
+        android:title="pesanan"
+        android:icon="@drawable/list_bottom"
+        />
+
+    <item android:id="@+id/profile"
+        android:title="profile"
+        android:icon="@drawable/profile_bottom"
+        />
+</menu>

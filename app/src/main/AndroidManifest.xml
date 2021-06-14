@@ -13,18 +13,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectUAS"
         android:usesCleartextTraffic="true">
-        <activity android:name=".halaman_inhistori_pesanan_kursus_murid" />
-        <activity android:name=".halaman_inpembayaran_pesanan_kursus_murid" />
-        <activity android:name=".halaman_inzoom_pesanan_kursus_murid" />
-        <activity android:name=".home_murid" />
-        <activity android:name=".login">
+
+        <activity android:name=".halaman_murid" />
+        <activity android:name=".halaman_register" />
+
+        <activity android:name=".halaman_login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
